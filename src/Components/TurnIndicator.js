@@ -12,7 +12,7 @@ export default function TurnIndicator (props) {
         redStyle = "bg-red-900"
     }
     return (
-        <div className="text-gray-50 flex justify-center items-center flex-col">
+        <div className="text-gray-50 flex justify-center items-center flex-col" title={props.turn === 1 ? "Red's Turn" : "Green's Turn"}>
             TURN
             <div className={"turnIndicator border-2 border-red-500 aspect-square circle m-4 " + redStyle}></div>
             <div className={"turnIndicator border-2 border-green-500 aspect-square circle m-4 " + greenStyle}></div>

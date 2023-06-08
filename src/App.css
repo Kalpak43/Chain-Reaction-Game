@@ -37,6 +37,11 @@
   }
 }
 
+.child {
+  pointer-events: none;
+  touch-action: none;
+}
+
 .vh {
   max-height: 10vh;
 }

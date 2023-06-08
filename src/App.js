@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Board from './Components/Board';
 import Start from './Components/Start';
+import Sphere from './Components/Sphere';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Start/>} />
           <Route path="/Board" element={<Board/>} />
+          <Route path="/Sphere" element={<Sphere/>} />
         </Routes>
       </div>
     </BrowserRouter>

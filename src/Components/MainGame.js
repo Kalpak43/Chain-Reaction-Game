@@ -1,5 +1,7 @@
 import { useState } from "react";
 import TurnIndicator from "./TurnIndicator";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
 
 export default function MainGame(props) {
     // All colors available to play in the game
@@ -112,6 +114,7 @@ export default function MainGame(props) {
     const handleGame = (e) => {
 
         e.preventDefault()
+
         const ind1 = Number(e.target.getAttribute('data-key1'))
         const ind2 = Number(e.target.getAttribute('data-key2'))
 
@@ -143,16 +146,16 @@ export default function MainGame(props) {
                     let circleColor = `bg-${k.color}-900`
 
                     if (k.mass === 1) {
-                        dispCircles = <div className={"border-2 h-1/2 w-1/2 absolute top-1/4 left-1/4 circle " + circleColor}></div>
+                        dispCircles = <div className={"child border-2 h-1/2 w-1/2 absolute top-1/4 left-1/4 circle " + circleColor}></div>
                     }
                     else if (k.mass === 2) {
-                        dispCircles = <div>
+                        dispCircles = <div className="child">
                             <div className={"border-2 h-1/3 w-1/3 absolute top-1/4 left-0 circle m-1 " + circleColor}></div>
                             <div className={"border-2 h-1/3 w-1/3 absolute top-1/4 left-1/2 circle m-1 " + circleColor}></div>
                         </div>
                     }
                     else if (k.mass === 3) {
-                        dispCircles = <div>
+                        dispCircles = <div className="child">
                             <div className={"border-2 h-1/3 w-1/3 absolute top-1/5 left-1/4 circle m-1 " + circleColor}></div>
                             <div className={"border-2 h-1/3 w-1/3 absolute top-1/3 left-0 circle m-1 " + circleColor}></div>
                             <div className={"border-2 h-1/3 w-1/3 absolute top-1/3 left-1/2 circle m-1 " + circleColor}></div>
@@ -185,8 +188,8 @@ export default function MainGame(props) {
                         </div>}
             </div>
             <div className="flex justify-center items-center">
-                <div className="flex justify-center items-center text-gray-50 border-2 h-1/6 aspect-square circle bg-gray-500" onClick={resetGame}>
-                    Reset
+                <div className="flex justify-center items-center text-gray-50 border-2 h-1/6 aspect-square circle bg-gray-500 rotate-90 hover:text-black" title="Reset" onClick={resetGame}>
+                    <FontAwesomeIcon icon={faRotateRight} className="fa-3x fa-flip-horizontal" />
                 </div>
             </div>
         </div>
