@@ -171,9 +171,11 @@ export default function MainGame(props) {
     })
 
     return (
-        <div className="grid grid-cols-3">
-            <TurnIndicator turn={turn} />
-            <div className="flex w-full h-90vh justify-center col-start-2 col-end-3 relative border-r-2 border-l-2">
+        <div className="MainGame grid grid-cols-3">
+            <div className="TurnBlock">
+                <TurnIndicator turn={turn} />
+            </div>
+            <div className="GameContainer flex w-full h-90vh justify-center col-start-2 col-end-3 relative border-r-2 border-l-2">
                 <div className="grid grid-rows-11 text-gray-50" onClick={() => {
                     if (validClick) {
                         setTurn((turn % players) + 1)
@@ -187,10 +189,10 @@ export default function MainGame(props) {
                             <p className="text-5xl font-bold">{winner} won</p>
                         </div>}
             </div>
-            <div className="flex justify-center items-center">
-                <div className="flex justify-center items-center text-gray-50 border-2 h-1/6 aspect-square circle bg-gray-500 rotate-90 hover:text-black" title="Reset" onClick={resetGame}>
+            <div className="Reset relative">
+                <button className="absolute inset-0 m-auto text-gray-50 border-2 h-1/6 aspect-square circle bg-gray-500 rotate-90 hover:text-black" title="Reset" onClick={resetGame}>
                     <FontAwesomeIcon icon={faRotateRight} className="fa-3x fa-flip-horizontal" />
-                </div>
+                </button>
             </div>
         </div>
     )
