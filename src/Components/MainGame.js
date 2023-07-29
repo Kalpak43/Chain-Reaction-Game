@@ -1,7 +1,7 @@
-import { useState } from "react";
-import TurnIndicator from "./TurnIndicator";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faRotateRight } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react"
+import TurnIndicator from "./TurnIndicator"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faRotateRight } from "@fortawesome/free-solid-svg-icons"
 
 export default function MainGame(props) {
     // All colors available to play in the game

@@ -7,7 +7,7 @@ export default function Sphere() {
 
 
     return (
-        <div className="bg-gray-50 h-full w-full">
+        <div className="bg-gray-50 h-1/6 aspect-square">
             <Canvas>
                 <Sphere1 />
             </Canvas>
